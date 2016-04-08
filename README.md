@@ -1,4 +1,4 @@
-# React with Redux
+# react-isomophic-server-rending
 combine react with redux
 
 ### start
@@ -10,11 +10,11 @@ npm run dev
 ```
 
 ### Thinking about Isomorphic Server rendering
-		1. server setting(nodejs) and render HTML
-		2. client biggest content(client/index) with component(this.prop.children, the component tree that the router gives us)
-		3. setting route(routes.jsx)
-		4. server route handle -> createLocation
-		5. remainder things like setting component route in client -> createBrowserLocation
+	1. server setting(nodejs) and render HTML
+	2. client biggest content(client/index) with component(this.prop.children, the component tree that the router gives us)
+	3. setting route(routes.jsx)
+	4. server route handle -> createLocation
+	5. remainder things like setting component route in client -> createBrowserLocation
 
 ### Thinking about react with redux
     1. thinking about action
