@@ -2,14 +2,17 @@ import React       from 'react';
 import { render }  from 'react-dom';
 import { Router }  from 'react-router';
 import createBrowserHistory from 'history/lib/createBrowserHistory';
-import routes      from 'routes';
 import { createStore, combineReducers } from 'redux';
 import { Provider }                     from 'react-redux';
-import * as reducers                    from 'reducers';
 import { fromJS }                       from 'immutable';
+
+
+import routes      from 'routes';
+import * as reducers                    from 'reducers';
 
 const history = createBrowserHistory();
 
+// receive state by window.__INITIAL_STATE__ to client side
 let initialState = window.__INITIAL_STATE__;
 
 // Using Immutable to deal with state

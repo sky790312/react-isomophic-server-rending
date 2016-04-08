@@ -3,9 +3,10 @@ import React                            from 'react';
 import { renderToString }               from 'react-dom/server'
 import { RoutingContext, match }        from 'react-router';
 import createLocation                   from 'history/lib/createLocation';
-import routes                           from 'routes';
 import { createStore, combineReducers } from 'redux';
 import { Provider }                     from 'react-redux';
+
+import routes                           from 'routes';
 import * as reducers                    from 'reducers';
 
 
@@ -30,6 +31,7 @@ app.use((req, res) => {
       </Provider>
     );
 
+    // pass state by window.__INITIAL_STATE__ to client side
     const initialState = store.getState();
 
     const componentHTML = renderToString(InitialComponent);

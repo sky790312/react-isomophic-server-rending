@@ -2,6 +2,7 @@ import Immutable from 'immutable';
 
 const defaultState = new Immutable.List();
 
+// Using Immutable to deal with state
 export default function todoReducer(state = defaultState, action) {
   switch(action.type) {
     case 'CREATE_TODO':
